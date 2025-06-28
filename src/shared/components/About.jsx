@@ -59,7 +59,7 @@ function About() {
                 <h2 className="2xl:text-[32px] xl:text-[28px] lg:text-[28px] text-[28px] namdhinggo-extrabold text-[#40C3CD] text-center lg:mt-15 mt-10">About Our Conference</h2>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2  lg:mt-7 mt-5 2xl:gap-15 xl:gap-10 lg:gap-10 gap-5 place-items-center">
-                    <div className="max-w-[600px] w-fit" ><img src="/images/about.jpg" alt="image3" className="  " /></div>
+                    <div className="max-w-[600px] w-fit" ><img src="/images/about.jpg" alt="image3" className="  " loading='lazy'/></div>
 
                     <div className="space-y-5  bg-cover bg-center " style={{ backgroundImage: "url('/images/bgmic.jpg')" }}>
                         <p className=" text-[16px] leading-[30px] text-justify"><span className="inter-bold ">The International Conference on Next-Gen Technologies in Healthcare and Security</span> <span className="inter-regular opacity-85">brings together a global community of researchers, professionals, and innovators to explore the transformative potential of emerging technologies in two of the most critical domains—healthcare and security. The conference serves as a collaborative platform to exchange cutting-edge research, share innovative solutions, and discuss the challenges and opportunities in deploying next-gen technologies for real-world applications.</span></p>

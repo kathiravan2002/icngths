@@ -54,7 +54,7 @@ function Scope() {
                 <h2 className="2xl:text-[32px] xl:text-[28px] lg:text-[28px] text-[28px] namdhinggo-extrabold text-[#40C3CD] text-center lg:mt-15 mt-10">Scope Of Our Conference</h2>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2  lg:mt-7 mt-5 2xl:gap-15 xl:gap-10 lg:gap-10 gap-5 place-items-center">
-                    <div className="max-w-[600px] w-fit  " ><img src="/images/scope.jpg" alt="image3" className=" " /></div>
+                    <div className="max-w-[600px] w-fit  " ><img src="/images/scope.jpg" alt="image3" className=" " loading='lazy'/></div>
 
                     <div className="space-y-5  bg-cover bg-center " style={{ backgroundImage: "url('/images/bgmic.jpg')" }}>
                         <p className=" text-[16px] leading-[30px] text-justify inter-regular opacity-85">The conference focuses on the convergence of advanced technologies and their transformative impact on the healthcare and security sectors. It covers a broad range of next-generation tools and methodologies including Artificial Intelligence, Internet of Things (IoT), Blockchain, Big Data Analytics, Cybersecurity, and Cloud Computing. These technologies are enabling faster, smarter, and more secure systems for medical diagnostics, patient care, healthcare management, and digital safety.</p>

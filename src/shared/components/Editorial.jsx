@@ -125,7 +125,7 @@ function Editorial() {
                             <div key={index} className=" ">
                                 <div className="">
                                     <div className="flex  justify-center items-center rounded-t-[75px] bg-white  border-[#40C3CD] border-t-[25px]  ">
-                                        <img src="/images/cnhuman12.png" alt="image" className="   " />
+                                        <img src="/images/cnhuman12.png" alt="image" className="   " loading='lazy' />
                                     </div>
                                     <div className=" flex flex-col justify-center items-center text-white bg-[#40C3CD] rounded-b-[75px]   py-7 mb-10">
                                         <h2 className="2xl:text-[24px] xl:text-[28px] lg:text-[24px] text-[24px] namdhinggo-extrabold text-white text-center">{item.name}</h2>

@@ -81,7 +81,7 @@ function Home() {
                 <h2 className="2xl:text-[32px] xl:text-[28px] lg:text-[28px] text-[28px] namdhinggo-extrabold text-[#40C3CD] text-center ">About the Conference</h2>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2  lg:mt-7 mt-5 2xl:gap-15 xl:gap-10 lg:gap-10 gap-5 place-items-center">
-                    <div className=" max-w-[600px] w-fit"><img src="/images/abouthome.jpg" alt="image3" className="" /></div>
+                    <div className=" max-w-[600px] w-fit"><img src="/images/abouthome.jpg" alt="image3" className="" loading='lazy' /></div>
                     <div className="  bg-cover bg-center " style={{ backgroundImage: "url('/images/bgmic.jpg')" }}>
                         <p className=" text-[16px] leading-[30px] text-justify"><span className="inter-bold ">The International Conference on Next-Gen Technologies in Healthcare and Security</span> <span className="inter-regular opacity-85">is dedicated to advancing innovation at the intersection of healthcare and cybersecurity. Our mission is to provide a dynamic platform for researchers, academics, professionals, and industry leaders to present their latest findings, share insights, and collaborate on transformative technologies. Through keynote sessions, technical paper presentations, and expert panel discussions, the conference aims to address real-world challenges, promote interdisciplinary dialogue, and inspire solutions that shape the future of healthcare and security systems worldwide.</span></p>
                         <div className="mt-5 space-y-3 text-justify">
@@ -127,7 +127,7 @@ function Home() {
                 <h2 className="2xl:text-[32px] xl:text-[28px] lg:text-[28px] text-[28px] namdhinggo-extrabold text-[#40C3CD] text-center mt-15">Our Mission</h2>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2  lg:mt-7 mt-5 2xl:gap-15 xl:gap-10 lg:gap-10 gap-5 place-items-center ">
-                    <div className="relative max-w-[600px] w-fit lg:hidden block " ><img src="/images/scopehome.jpg" alt="image3" className=" " /></div>
+                    <div className="relative max-w-[600px] w-fit lg:hidden block " ><img src="/images/scopehome.jpg" alt="image3" className=" " loading='lazy'/></div>
 
                     <div className="  bg-cover bg-center " style={{ backgroundImage: "url('/images/bgmic.jpg')" }}>
                         <p className="  text-[16px] leading-[30px] text-justify inter-regular opacity-85">To foster innovation and collaboration in the fields of healthcare and security by providing a global platform for researchers, professionals, and industry leaders. The conference aims to accelerate the development and adoption of next-generation technologies that address critical challenges, improve quality of life, and ensure secure, sustainable systems for the future.</p>
@@ -151,7 +151,7 @@ function Home() {
                         </div>
                     </div>
 
-                    <div className="max-w-[600px] w-fit"><img src="/images/scopehome.jpg" alt="image3" className="  hidden lg:block" /></div>
+                    <div className="max-w-[600px] w-fit"><img src="/images/scopehome.jpg" alt="image3" className="  hidden lg:block" loading='lazy'/></div>
 
                 </div>
             </div>
@@ -166,7 +166,7 @@ function Home() {
                             <div key={index} className=" ">
                                 <div className="">
                                     <div className="flex  justify-center items-center rounded-t-[75px] bg-white  border-[#40C3CD] border-t-[25px]  ">
-                                        <img src="/images/cnhuman12.png" alt="image" className="   " />
+                                        <img src="/images/cnhuman12.png" alt="image" className="   " loading='lazy'/>
                                     </div>
                                     <div className=" flex flex-col justify-center items-center text-white bg-[#40C3CD] rounded-b-[75px]   py-7 mb-10">
                                         <p className="namdhinggo-extrabold 2xl:text-[28px] xl:text-[28px] lg:text-[24px] text-[24px]   ">{item.name}</p>
