@@ -113,7 +113,7 @@ function Editorial() {
         },
         {
             name: " Dr. Yonglin Chen",
-            university: "The First Hospital of Lanzhou University,",
+            university: "The First Hospital of Lanzhou University",
             job: "Department of Cardio",
             country: "China"
         },
@@ -136,19 +136,19 @@ function Editorial() {
             country: "Norway"
         },
         {
-            name: "Dr. Arun Kumar R",
+            name: "Dr. R. Arun Kumar",
             university: "University of South Wales",
             job: "Department of Cybersecuriy",
             country: "United Kingdom"
         },
         {
-            name: "Dr. Ayodeji Oludola OLUWATOPE",
+            name: "Dr. Ayodeji Oludola Oluwatope",
             university: "Obafemi Awolowo University",
             job: "Department of CSE",
             country: "Nigeria"
         },
         {
-            name: "Dr. Sutapa C Sarkar",
+            name: "Dr. C. Sutapa Sarkar",
             university: " Brainware University",
             job: "Department of ECE",
             country: "India"
@@ -253,20 +253,18 @@ function Editorial() {
             <div className=" mt-15">
                 <div className=" bg-cover" style={{ backgroundImage: "url('/images/authorbg.jpg')" }}>
                     <h2 className="2xl:text-[32px] xl:text-[28px] lg:text-[28px] text-[28px] namdhinggo-extrabold text-[#40C3CD] text-center pt-10">Meet Our Editorial Board Members</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:gap-15 xl:gap-10 lg:gap-10 md:gap-10 gap-4 py-10 max-w-[1400px] mx-auto px-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:gap-15 xl:gap-10 lg:gap-10 md:gap-10 gap-4 py-10 max-w-[1400px] mx-auto px-4 ">
                         {editorial.map((item, index) => (
                             <div key={index} className=" ">
-                                <div className="">
                                     {/* <div className="flex  justify-center items-center rounded-t-[75px] bg-white  border-[#40C3CD] border-t-[25px]  ">
                                         <img src="/images/cnhuman12.png" alt="image" className="   " loading='lazy' />
                                     </div> */}
-                                    <div className=" flex flex-col justify-center items-center text-white bg-[#40C3CD] rounded-full   py-7 ">
-                                        <h2 className="2xl:text-[24px] xl:text-[28px] lg:text-[24px] text-[24px] namdhinggo-extrabold text-white text-center">{item.name}</h2>
-                                        <div className="flex justify-center gap-3"><MdOutlineWorkOutline className='text-[20px] text-white mt-1' /> <p className="text-[20px] namdhinggo-medium text-white text-center">{item.job}</p></div>
-                                        <div className="flex justify-center gap-3"><FaUniversity  className='text-[20px] text-white mt-1' /> <p className="text-[20px] namdhinggo-medium text-white text-center">{item.university}</p></div>
-                                        <div className="flex justify-center gap-2"><IoLocationSharp className='text-[22px] text-white mt-1' /> <p className="text-[20px] namdhinggo-medium text-white text-center"> {item.country}</p></div>
+                                    <div className=" flex flex-col lg:justify-center lg:items-center text-white bg-[#40C3CD] lg:rounded-full rounded-4xl  h-full py-7 px-4">
+                                        <h2 className="2xl:text-[24px] xl:text-[28px] lg:text-[24px] text-[24px] namdhinggo-extrabold text-white lg:text-center">{item.name}</h2>
+                                        <div className="flex  gap-3"><MdOutlineWorkOutline className='text-[20px] text-white mt-1 shrink-0' /> <p className="text-[20px] namdhinggo-medium text-white lg:text-center">{item.job}</p></div>
+                                        <div className="flex  gap-3 "><FaUniversity  className='text-[20px] text-white mt-1  shrink-0' /> <p className="text-[20px] namdhinggo-medium text-white lg:text-center">{item.university}</p></div>
+                                        <div className="flex  gap-2"><IoLocationSharp className='text-[22px] text-white mt-1  shrink-0' /> <p className="text-[20px] namdhinggo-medium text-white lg:text-center"> {item.country}</p></div>
 
-                                    </div>
                                 </div>
                             </div>
                         ))}
