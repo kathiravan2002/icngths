@@ -134,7 +134,7 @@ function Organizing() {
 
 
            
-            <div className=" mt-15">
+            {/* <div className=" mt-15">
                 <div className=" bg-cover" style={{ backgroundImage: "url('/images/authorbg.jpg')" }}>
                     <h2 className="2xl:text-[32px] xl:text-[28px] lg:text-[28px] text-[28px] namdhinggo-extrabold text-[#40C3CD] text-center pt-10">Meet the team behind ICNGTHS 2025 </h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:gap-15 xl:gap-10 lg:gap-10 md:gap-10 gap-4 lg:mt-7 mt-5 max-w-[1400px] mx-auto px-4">
@@ -156,7 +156,7 @@ function Organizing() {
                         ))}
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div className="pb-15  max-w-[1400px] mx-auto mt-15 px-4 2xl:px-0">
                 <h2 className="2xl:text-[32px] xl:text-[28px] lg:text-[28px] text-[28px] namdhinggo-extrabold text-[#40C3CD] text-center">Join Us at ICNGTHS 2025</h2>

@@ -7,6 +7,7 @@ import { IoLocationSharp } from 'react-icons/io5';
 import { MdOutlineWorkOutline } from 'react-icons/md';
 import { TbPointFilled } from 'react-icons/tb';
 import { Link } from 'react-router-dom';
+import { FaUniversity } from "react-icons/fa";
 
 function Editorial() {
 
@@ -51,22 +52,154 @@ function Editorial() {
 
     const editorial = [
         {
-            name: "Charles Ubagaram",
-            university: "Tata Consultancy Services",
-            // expertise: " Business Analytics",
-            country: "Ohio,USA"
+            name: "Dr. A. Karthikeyan",
+            university: "SNS College of Technology",
+            job: " Department of ECE",
+            country: "Bangaladesh"
         },
         {
-            name: "Kannan Srinivasan",
-            university: "Saiana Technologies Inc",
-            expertise: " Business Analytics",
-            country: "New Jersey, USA"
+            name: "Dr. Stephen Ekwe",
+            university: "University of Cape Town",
+            job: "Department of EEE",
+            country: "South Africa"
         },
         {
-            name: "Narsing Rao Dyavani",
-            university: "Uber Technologies Inc",
-            expertise: " Business Analytics",
-            country: "California,USA"
+            name: "Dr. A. Daison Raj",
+            university: " NITT Trichy",
+            job: "Department of CSE",
+            country: "India"
+        },
+        {
+            name: "Dr. S. Salomi",
+            university: "SRMIST, KTR Campus",
+            job: " Department of CI,",
+            country: "India"
+        },
+        {
+            name: "Dr. M. Anbarasan",
+            university: "Sairam Institution of Technology",
+            job: "Department of Civil",
+            country: "India"
+        },
+        {
+            name: "Dr. S. Jayashree",
+            university: "KGISL Institute of technology",
+            job: "Department of AI&ML",
+            country: "India"
+        },
+        {
+            name: "Dr. R.S. Aiswarya",
+            university: "KPR Institute of Technology",
+            job: "Department of Mech",
+            country: "India"
+        },
+        {
+            name: " Dr. Asma Sbeih",
+            university: "Palestine Ahliya university",
+            job: "Department of IT",
+            country: "Palestine"
+        },
+        {
+            name: "Dr. Sakthivel Velusamy",
+            university: "Konkuk Aerospace Design Institute",
+            job: " Department of Aerospace ",
+            country: "South Korea"
+        },
+        {
+            name: " Dr. Surendar Rama Sitaraman",
+            university: "Samsung Austin Development Center ",
+            job: " Advanced Computing Lab ",
+            country: "USA"
+        },
+        {
+            name: " Dr. Yonglin Chen",
+            university: "The First Hospital of Lanzhou University,",
+            job: "Department of Cardio",
+            country: "China"
+        },
+        {
+            name: " Dr. Brahim Issaoui",
+            university: "Qassim University",
+            job: "Department of ECE",
+            country: "Saudi Arabia"
+        },
+        {
+            name: "Dr. Rojalina Priyadarshini",
+            university: "C.V.Raman Global University",
+            job: "Department of Mech",
+            country: "India"
+        },
+        {
+            name: "Dr. Forsteamanuensis",
+            university: "UiT The Arctic University ",
+            job: "Department of Automation and Process",
+            country: "Norway"
+        },
+        {
+            name: "Dr. Arun Kumar R",
+            university: "University of South Wales",
+            job: "Department of Cybersecuriy",
+            country: "United Kingdom"
+        },
+        {
+            name: "Dr. Ayodeji Oludola OLUWATOPE",
+            university: "Obafemi Awolowo University",
+            job: "Department of CSE",
+            country: "Nigeria"
+        },
+        {
+            name: "Dr. Sutapa C Sarkar",
+            university: " Brainware University",
+            job: "Department of ECE",
+            country: "India"
+        },
+        {
+            name: "Dr. Abolfazl Gandomi",
+            university: "Islamic Azad University",
+            job: "Department of CSE",
+            country: "Iran"
+        },
+        {
+            name: "Dr. Muhammad Mujahid",
+            university: "Khwja Fareed University",
+            job: "Department of IT",
+            country: "Pakistan"
+        },
+        {
+            name: "Dr. Md Al Mustanjid",
+            university: "Daffodil International University",
+            job: "Department of Software Engineering",
+            country: "Bangladesh"
+        },
+        {
+            name: "Dr. Alven Ritonga",
+            university: " Universitas Wijaya Putra",
+            job: "Department of CSE",
+            country: "Indonesia"
+        },
+        {
+            name: "Dr. Thien B. Nguyen-Tat",
+            university: "National Cheng Kung University",
+            job: "Department of IT",
+            country: "Vietnam"
+        },
+        {
+            name: "Dr. Arun Kumar Rouniyar",
+            university: "Saharsa college of Engineering",
+            job: "Department of Mech",
+            country: "India"
+        },
+        {
+            name: "Dr. Ghasem Abbasi",
+            university: " Islamic Azad University",
+            job: "Department of MS",
+            country: "Iran"
+        },
+        {
+            name: "Dr. J. Jackson",
+            university: "Bannari Amman Institute of Technology",
+            job: "Department of Civil",
+            country: "India"
         },
         // {
         //     name: "Naga Sushma Allur",
@@ -120,16 +253,17 @@ function Editorial() {
             <div className=" mt-15">
                 <div className=" bg-cover" style={{ backgroundImage: "url('/images/authorbg.jpg')" }}>
                     <h2 className="2xl:text-[32px] xl:text-[28px] lg:text-[28px] text-[28px] namdhinggo-extrabold text-[#40C3CD] text-center pt-10">Meet Our Editorial Board Members</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:gap-15 xl:gap-10 lg:gap-10 md:gap-10 gap-4 lg:mt-7 mt-5 max-w-[1400px] mx-auto px-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:gap-15 xl:gap-10 lg:gap-10 md:gap-10 gap-4 py-10 max-w-[1400px] mx-auto px-4">
                         {editorial.map((item, index) => (
                             <div key={index} className=" ">
                                 <div className="">
-                                    <div className="flex  justify-center items-center rounded-t-[75px] bg-white  border-[#40C3CD] border-t-[25px]  ">
+                                    {/* <div className="flex  justify-center items-center rounded-t-[75px] bg-white  border-[#40C3CD] border-t-[25px]  ">
                                         <img src="/images/cnhuman12.png" alt="image" className="   " loading='lazy' />
-                                    </div>
-                                    <div className=" flex flex-col justify-center items-center text-white bg-[#40C3CD] rounded-b-[75px]   py-7 mb-10">
+                                    </div> */}
+                                    <div className=" flex flex-col justify-center items-center text-white bg-[#40C3CD] rounded-full   py-7 ">
                                         <h2 className="2xl:text-[24px] xl:text-[28px] lg:text-[24px] text-[24px] namdhinggo-extrabold text-white text-center">{item.name}</h2>
-                                        <div className="flex justify-center gap-3"><MdOutlineWorkOutline className='text-[20px] text-white mt-1' /> <p className="text-[20px] namdhinggo-medium text-white text-center">{item.university}</p></div>
+                                        <div className="flex justify-center gap-3"><MdOutlineWorkOutline className='text-[20px] text-white mt-1' /> <p className="text-[20px] namdhinggo-medium text-white text-center">{item.job}</p></div>
+                                        <div className="flex justify-center gap-3"><FaUniversity  className='text-[20px] text-white mt-1' /> <p className="text-[20px] namdhinggo-medium text-white text-center">{item.university}</p></div>
                                         <div className="flex justify-center gap-2"><IoLocationSharp className='text-[22px] text-white mt-1' /> <p className="text-[20px] namdhinggo-medium text-white text-center"> {item.country}</p></div>
 
                                     </div>
