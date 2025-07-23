@@ -208,6 +208,15 @@ function Editorial() {
         //     country: "  California,USA"
         // },
     ]
+
+    const final = [
+        {
+            name: "Dr. J. Jackson",
+            university: "Bannari Amman Institute of Technology",
+            job: "Department of Civil",
+            country: "India"
+        }
+    ]
     return (
         <div>
             <div className="lg:h-90 h-70   relative bg-cover bg-center " style={{ backgroundImage: "url('/images/allhero3.jpg')" }}>
@@ -255,20 +264,31 @@ function Editorial() {
                     <h2 className="2xl:text-[32px] xl:text-[28px] lg:text-[28px] text-[28px] namdhinggo-extrabold text-[#40C3CD] text-center pt-10">Meet Our Editorial Board Members</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:gap-15 xl:gap-10 lg:gap-10 md:gap-10 gap-4 py-10 max-w-[1400px] mx-auto px-4 ">
                         {editorial.map((item, index) => (
-                            <div key={index} className=" ">
-                                    {/* <div className="flex  justify-center items-center rounded-t-[75px] bg-white  border-[#40C3CD] border-t-[25px]  ">
-                                        <img src="/images/cnhuman12.png" alt="image" className="   " loading='lazy' />
-                                    </div> */}
-                                    <div className=" flex flex-col lg:justify-center lg:items-center text-white bg-[#40C3CD] lg:rounded-full rounded-4xl  h-full py-7 px-4">
-                                        <h2 className="2xl:text-[24px] xl:text-[28px] lg:text-[24px] text-[24px] namdhinggo-extrabold text-white lg:text-center">{item.name}</h2>
-                                        <div className="flex  gap-3"><MdOutlineWorkOutline className='text-[20px] text-white mt-1 shrink-0' /> <p className="text-[20px] namdhinggo-medium text-white lg:text-center">{item.job}</p></div>
-                                        <div className="flex  gap-3 "><FaUniversity  className='text-[20px] text-white mt-1  shrink-0' /> <p className="text-[20px] namdhinggo-medium text-white lg:text-center">{item.university}</p></div>
-                                        <div className="flex  gap-2"><IoLocationSharp className='text-[22px] text-white mt-1  shrink-0' /> <p className="text-[20px] namdhinggo-medium text-white lg:text-center"> {item.country}</p></div>
+                            <div key={index} className={`${index === 24 ? 'col-span-3 flex justify-center' : ''
+                                }`}>
 
+                                <div className=" flex flex-col lg:justify-center lg:items-center text-white bg-[#40C3CD] lg:rounded-full rounded-4xl  h-full py-7 px-4">
+                                    <h2 className="2xl:text-[24px] xl:text-[28px] lg:text-[24px] text-[24px] namdhinggo-extrabold text-white lg:text-center">{item.name}</h2>
+                                    <div className="flex  gap-3"><MdOutlineWorkOutline className='text-[20px] text-white mt-1 shrink-0' /> <p className="text-[20px] namdhinggo-medium text-white lg:text-center">{item.job}</p></div>
+                                    <div className="flex  gap-3 "><FaUniversity className='text-[20px] text-white mt-1  shrink-0' /> <p className="text-[20px] namdhinggo-medium text-white lg:text-center">{item.university}</p></div>
+                                    <div className="flex  gap-2"><IoLocationSharp className='text-[22px] text-white mt-1  shrink-0' /> <p className="text-[20px] namdhinggo-medium text-white lg:text-center"> {item.country}</p></div>
                                 </div>
                             </div>
                         ))}
                     </div>
+                    {/* <div className="flex justify-center items-center pb-10 pt-4 max-w-[1400px] mx-auto px-4 ">
+                        {final.map((item, index) => (
+                            <div key={index} className=" ">
+                                    
+                                    <div className=" flex flex-col lg:justify-center  lg:items-center text-white bg-[#40C3CD] lg:rounded-full rounded-4xl  h-full py-7 px-4">
+                                        <h2 className="2xl:text-[24px] xl:text-[28px] lg:text-[24px] text-[24px] namdhinggo-extrabold text-white lg:text-center">{item.name}</h2>
+                                        <div className="flex  gap-3"><MdOutlineWorkOutline className='text-[20px] text-white mt-1 shrink-0' /> <p className="text-[20px] namdhinggo-medium text-white lg:text-center">{item.job}</p></div>
+                                        <div className="flex  gap-3 "><FaUniversity  className='text-[20px] text-white mt-1  shrink-0' /> <p className="text-[20px] namdhinggo-medium text-white lg:text-center">{item.university}</p></div>
+                                        <div className="flex  gap-2"><IoLocationSharp className='text-[22px] text-white mt-1  shrink-0' /> <p className="text-[20px] namdhinggo-medium text-white lg:text-center"> {item.country}</p></div>
+                                </div>
+                            </div>
+                        ))}
+                    </div> */}
                 </div>
             </div>
 
@@ -283,13 +303,13 @@ function Editorial() {
                             <p className="namdhinggo-extrabold 2xl:text-[32px] xl:text-[28px] lg:text-[24px] text-[20px] text-white">Ready to Join the Innovation ?</p>
                             <p className="inter-medium text-[16px] text-white text-justify md:text-center max-w-[1000px] mx-auto">Register now and secure your spot today to connect with global experts, explore emerging technologies, and be part of shaping the future of computer science.</p>
                             <div className="flex lg:flex-row flex-col lg:gap-10 gap-0 space-y-5  justify-center items-start sm:items-center lg:items-start">
-                                <div className="flex gap-3"><IoLocationSharp className='text-[26px] text-[#40C3CD]' /><p className="namdhinggo-extrabold text-[20px] text-white">Beijing, China</p></div>
-                                <div className="flex gap-3"><FaCalendar className='text-[24px] text-[#40C3CD] ' /><p className="namdhinggo-extrabold text-[20px] text-white">28th to 30th Sep, 2025</p></div>
+                                <div className="flex gap-3"><IoLocationSharp className='text-[26px] text-[#40C3CD]' /><p className="namdhinggo-extrabold text-[20px] text-white">Guilin, China</p></div>
+                                <div className="flex gap-3"><FaCalendar className='text-[24px] text-[#40C3CD] ' /><p className="namdhinggo-extrabold text-[20px] text-white">October 28, 2025</p></div>
                                 <div className="flex gap-3"><BsFillClockFill className='text-[24px] text-[#40C3CD] ' /><p className="namdhinggo-extrabold text-[20px] text-white">9:00 AM – 5:00 PM</p></div>
                             </div>
                             <Link to="/paper-submission">
                                 <div className="namdhinggo-extrabold lg:text-[24px] text-[18px] flex justify-center  ">
-                                <button className="group cursor-pointer flex items-center gap-4 px-6 py-2 rounded-full text-white font-semibold bg-gradient-to-r from-[#379197]  via-[#3bb2bb]  to-[#2798a0]  shadow-lg transition-all duration-500 ease-in-out hover:from-[#40C3CD]  hover:to-[#40C3CD]  hover:scale-105 hover:shadow-[0_8px_24px_rgba(44,83,100,0.6)]">
+                                    <button className="group cursor-pointer flex items-center gap-4 px-6 py-2 rounded-full text-white font-semibold bg-gradient-to-r from-[#379197]  via-[#3bb2bb]  to-[#2798a0]  shadow-lg transition-all duration-500 ease-in-out hover:from-[#40C3CD]  hover:to-[#40C3CD]  hover:scale-105 hover:shadow-[0_8px_24px_rgba(44,83,100,0.6)]">
                                         Register Now  <FaArrowRightLong className="text-[22px] transition-transform duration-300 group-hover:translate-x-1" />
                                     </button>
                                 </div>

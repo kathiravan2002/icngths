@@ -10,22 +10,7 @@ import { TbPointFilled } from 'react-icons/tb';
 
 function Home() {
 
-    const gridItems = [
-
-        {
-            Date: "July 20,2025",
-            Title: "Paper Submission Deadline  Final Extension"
-        },
-        {
-            Date: "August 20,2025",
-            Title: "Author Acceptance Notification Description"
-        },
-        {
-            Date: "September 10,2025",
-            Title: "Final Manuscript Submission Guidelines"
-        },
-
-    ]
+   
 
 
 
@@ -56,8 +41,8 @@ function Home() {
                 <div className="flex justify-start items-center h-full max-w-[1400px] mx-auto ">
                     <div className=" relative z-10 mt-28  sm:mt-0 md:mt-0 lg:mt-15 flex flex-col 2xl:space-y-8 xl:space-y-5 lg:space-y-5 space-y-5 justify-center max-w-[900px] px-5 md:px-10 lg:px-15 xl:px-15 2xl:px-0 py-5 lg:mb-15 mb-15">
                         <div className="flex md:flex-row flex-row md:justify-between justify-between items-center gap-5 lg:gap-0 max-w-[500px]">
-                            <div className="flex  gap-4 "><FaCalendarAlt className='text-[#40C3CD] flex shrink-0 text-[20px] md:text-[28px] mt-0.5' /> <h2 className="text-white namdhinggo-extrabold md:text-[24px] text-[18px]">Sep 28-30, 2025</h2></div>
-                            <div className="flex  gap-3 "><IoLocationSharp className='text-[#40C3CD] flex shrink-0 text-[20px] md:text-[28px] mt-0.5' /> <h2 className="text-white namdhinggo-extrabold md:text-[24px] text-[18px]">Beijing, China</h2></div>
+                            <div className="flex  gap-4 "><FaCalendarAlt className='text-[#40C3CD] flex shrink-0 text-[20px] md:text-[28px] mt-0.5' /> <h2 className="text-white namdhinggo-extrabold md:text-[24px] text-[18px]">October 28, 2025</h2></div>
+                            <div className="flex  gap-3 "><IoLocationSharp className='text-[#40C3CD] flex shrink-0 text-[20px] md:text-[28px] mt-0.5' /> <h2 className="text-white namdhinggo-extrabold md:text-[24px] text-[18px]">Guilin, China</h2></div>
                         </div>
                         <h1 className="2xl:text-[32px] xl:text-[28px] lg:text-[28px] md:text-[28px] text-[26px] namdhinggo-extrabold text-[#40C3CD] lg:text-start text-start ">International Conference on Next-Gen Technologies in Healthcare and Security</h1>
                         <p className="text-[16px] md:text-[18px] leading-[30px] text-justify inter-regular text-white">A global platform for exploring next-generation technologies in healthcare and security.Bringing together researchers, innovators, and industry experts from around the world. Fostering collaboration, knowledge sharing, and impactful advancements.</p>
@@ -199,8 +184,8 @@ function Home() {
                             <p className="namdhinggo-extrabold 2xl:text-[32px] xl:text-[28px] lg:text-[24px] text-[20px] text-white">Ready to Join the Innovation ?</p>
                             <p className="inter-medium text-[16px] text-white text-justify md:text-center max-w-[1000px] mx-auto">Register now and secure your spot today to connect with global experts, explore emerging technologies, and be part of shaping the future of computer science.</p>
                             <div className="flex lg:flex-row flex-col lg:gap-10 gap-0 space-y-5  justify-center items-start sm:items-center lg:items-start">
-                                <div className="flex gap-3"><IoLocationSharp className='text-[26px] text-[#40C3CD]' /><p className="namdhinggo-extrabold text-[20px] text-white">Beijing, China</p></div>
-                                <div className="flex gap-3"><FaCalendar className='text-[24px] text-[#40C3CD] ' /><p className="namdhinggo-extrabold text-[20px] text-white">28th to 30th Sep, 2025</p></div>
+                                <div className="flex gap-3"><IoLocationSharp className='text-[26px] text-[#40C3CD]' /><p className="namdhinggo-extrabold text-[20px] text-white">Guilin, China</p></div>
+                                <div className="flex gap-3"><FaCalendar className='text-[24px] text-[#40C3CD] ' /><p className="namdhinggo-extrabold text-[20px] text-white">October 28, 2025</p></div>
                                 <div className="flex gap-3"><BsFillClockFill className='text-[24px] text-[#40C3CD] ' /><p className="namdhinggo-extrabold text-[20px] text-white">9:00 AM – 5:00 PM</p></div>
                             </div>
                             {/* <Link to="/paper-submission">

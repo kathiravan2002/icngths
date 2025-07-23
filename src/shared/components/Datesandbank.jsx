@@ -9,11 +9,11 @@ import { Link } from 'react-router-dom';
 function Datesandbank() {
     const dates = [
         {
-            content1: " August 10, 2025",
+            content1: " August 20, 2025",
             title: "Abstract Submission Deadline"
         },
         {
-            content1: " August 10, 2025",
+            content1: " August 29, 2025",
             title: "Full Paper Submission Deadline"
         },
         {
@@ -25,11 +25,11 @@ function Datesandbank() {
             title: "Final Paper Submission"
         },
         {
-            content1: " September 15, 2025",
+            content1: "October 2, 2025",
             title: "Registration Deadline"
         },
         {
-            content1: " October 24–26, 2025",
+            content1: " October 28, 2025",
             title: "Conference Dates"
         },
 
@@ -50,23 +50,23 @@ function Datesandbank() {
             <div className="lg:h-90 h-70   relative bg-cover bg-center " style={{ backgroundImage: "url('/images/allhero3.jpg')" }}>
                 <div className="absolute inset-0 bg-[#000000] opacity-60 lg:h-90 h-70 "></div>
                 <div className="relative z-10 flex flex-col justify-center items-center h-full space-y-2">
-                    <h2 className="text-[28px] md:text-[36px] lg:text-[45px] namdhinggo-medium text-white mt-10 px-4 text-center">Important Dates & Bank Details</h2>
+                    <h2 className="text-[28px] md:text-[36px] lg:text-[45px] namdhinggo-medium text-white mt-10 px-4 text-center">Important Dates </h2>
                     <div className="flex space-x-2 ">
                         <Link to='/'>
                             <h2 className="md:text-[24px] text-[20px] namdhinggo-medium text-white hover:text-[#40C3CD] duration-300 ">Home</h2>
                         </Link>
-                        <h2 className="md:text-[24px] text-[20px] namdhinggo-medium  text-[#40C3CD] "><span className="text-white">/ </span>Important Dates & Bank Details</h2>
+                        <h2 className="md:text-[24px] text-[20px] namdhinggo-medium  text-[#40C3CD] "><span className="text-white">/ </span>Important Dates</h2>
                     </div>
                 </div>
             </div>
             <div >
-                <h2 className="px-4 2xl:text-[32px] xl:text-[28px] lg:text-[28px] text-[28px] namdhinggo-extrabold text-[#40C3CD] text-center lg:mt-15 mt-10 ">Important Dates & Bank Details</h2>
+                <h2 className="px-4 2xl:text-[32px] xl:text-[28px] lg:text-[28px] text-[28px] namdhinggo-extrabold text-[#40C3CD] text-center lg:mt-15 mt-10 ">Important Dates</h2>
             </div>
 
 
             <div className=" max-w-[1400px] mx-auto px-4 2xl:px-0  mt-5 ">
                 <div className="space-y-4">
-                    <p className=" text-[16px] leading-[30px] text-justify inter-regular opacity-85"> <span className="inter-bold ">The International Conference on Next-Gen Technologies in Healthcare and Security </span> <span className="inter-regular opacity-85">invites researchers, professionals, and academicians to participate in this impactful event. To ensure smooth planning and participation, please take note of the important deadlines related to abstract submission, paper acceptance, registration, and final submission. Additionally, all participants are requested to complete the payment process through the official bank details provided below. Timely adherence to these dates and guidelines will help us organize a successful and well-coordinated conference experience for all.</span></p>
+                    <p className=" text-[16px] leading-[30px] text-justify inter-regular opacity-85"> <span className="inter-bold ">The International Conference on Next-Gen Technologies in Healthcare and Security </span> <span className="inter-regular opacity-85">invites researchers, professionals, and academicians to participate in this impactful event. To ensure smooth planning and participation, please take note of the important deadlines related to abstract submission, paper acceptance, registration, and final submission. </span></p>
                 </div>
             </div>
 
@@ -124,7 +124,7 @@ function Datesandbank() {
             </div>
 
 
-            <div className="max-w-[1400px] mx-auto  lg:mt-15 mt-10 ">
+            {/* <div className="max-w-[1400px] mx-auto  lg:mt-15 mt-10 ">
                
              <h2 className="2xl:text-[32px] xl:text-[28px] lg:text-[28px] text-[28px] namdhinggo-extrabold text-[#40C3CD] text-center ">Bank Details for Registration Payment</h2>
               <p className="inter-regular opacity-85 leading-[30px] mt-5 px-4 text-justify">Participants of the International Conference on Next-Gen Technologies in Healthcare and Security are requested to make their registration payment through the official bank account provided by the organizers. It is important to include your full name and paper ID (if applicable) in the transaction reference to ensure accurate verification. After completing the payment, please retain the receipt and upload it during the registration process or email it to the conference team. International participants should ensure that any applicable transfer fees are covered. Timely payment is essential for confirming your participation in the conference.</p>
@@ -141,7 +141,7 @@ function Datesandbank() {
                                 </div>
                             ))}
               </div>
-            </div>
+            </div> */}
             <div className="pb-15  max-w-[1400px] mx-auto mt-15 px-4 2xl:px-0">
                 <h2 className="2xl:text-[32px] xl:text-[28px] lg:text-[28px] text-[28px] namdhinggo-extrabold text-[#40C3CD] text-center">Join Us at ICNGTHS 2025</h2>
                 <p className="md:text-[18px] text-[16px]  inter-semibold lg:text-center mt-5  opacity-85 text-justify">Experience groundbreaking research presentations and network with industry leaders</p>
@@ -153,8 +153,8 @@ function Datesandbank() {
                             <p className="namdhinggo-extrabold 2xl:text-[32px] xl:text-[28px] lg:text-[24px] text-[20px] text-white">Ready to Join the Innovation ?</p>
                             <p className="inter-medium text-[16px] text-white text-justify md:text-center max-w-[1000px] mx-auto">Register now and secure your spot today to connect with global experts, explore emerging technologies, and be part of shaping the future of computer science.</p>
                             <div className="flex lg:flex-row flex-col lg:gap-10 gap-0 space-y-5  justify-center items-start sm:items-center lg:items-start">
-                                <div className="flex gap-3"><IoLocationSharp className='text-[26px] text-[#40C3CD]' /><p className="namdhinggo-extrabold text-[20px] text-white">Beijing, China</p></div>
-                                <div className="flex gap-3"><FaCalendar className='text-[24px] text-[#40C3CD] ' /><p className="namdhinggo-extrabold text-[20px] text-white">28th to 30th Sep, 2025</p></div>
+                                <div className="flex gap-3"><IoLocationSharp className='text-[26px] text-[#40C3CD]' /><p className="namdhinggo-extrabold text-[20px] text-white">Guilin, China</p></div>
+                                <div className="flex gap-3"><FaCalendar className='text-[24px] text-[#40C3CD] ' /><p className="namdhinggo-extrabold text-[20px] text-white">October 28, 2025</p></div>
                                 <div className="flex gap-3"><BsFillClockFill className='text-[24px] text-[#40C3CD] ' /><p className="namdhinggo-extrabold text-[20px] text-white">9:00 AM – 5:00 PM</p></div>
                             </div>
                             <Link to="/paper-submission">

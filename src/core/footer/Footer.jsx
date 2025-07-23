@@ -47,9 +47,9 @@ const Footer = () => {
               <div className=''>
                 <h4 className="lg:text-xl poppins-bold mb-2 ">Contact Info</h4>
                 <ul className="lg:text-base text-sm space-y-2">
-                  <li><a className="hover:underline inter-medium"><Link to=''>Beijing, China</Link></a></li>
+                  <li><a className="hover:underline inter-medium"><Link to=''>Guilin, China</Link></a></li>
                   <li><a className="hover:underline inter-medium"><Link to="#" onClick={handleGmailLink}>info.icngths@gmail.com</Link></a></li>
-                  <li><a className="hover:underline inter-medium"><Link to=''>+91 8870212121</Link></a></li>
+                  {/* <li><a className="hover:underline inter-medium"><Link to=''>+91 8870212121</Link></a></li> */}
                 </ul>
               </div>
             </div>
