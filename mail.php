@@ -13,7 +13,7 @@ use PHPMailer\PHPMailer\SMTP;
 
 require_once realpath(__DIR__ . "/vendor/autoload.php");
 
-$required_fields = ['Paper_Title', 'Author_FUll_Name','Email_Address', 'Institution_Name', 'Paper_Track'];
+$required_fields = ['Submission_ID', 'Paper_Title', 'Author_FUll_Name', 'Email_Address', 'Institution_Name', 'Paper_Track'];
 $missing_fields = [];
 
 foreach ($required_fields as $field) {
@@ -71,7 +71,7 @@ try {
     }
 
     $mail->isHTML(true);
-    $mail->Subject = 'New Paper Submission - ' . htmlspecialchars($_POST['Paper_Title']);
+    $mail->Subject = 'New Paper Submission [' . htmlspecialchars($_POST['Submission_ID']) . '] - ' . htmlspecialchars($_POST['Paper_Title']);
     
     $mail->Body = '
         <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px;">
@@ -79,10 +79,14 @@ try {
             
             <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
                 <tr style="background-color: #f8f9fa;">
-                    <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold; width: 30%;">Paper Title:</td>
-                    <td style="padding: 12px; border: 1px solid #ddd;">' . htmlspecialchars($_POST['Paper_Title']) . '</td>
+                    <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold; width: 30%;">Submission ID:</td>
+                    <td style="padding: 12px; border: 1px solid #ddd;">' . htmlspecialchars($_POST['Submission_ID']) . '</td>
                 </tr>
                 <tr>
+                    <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Paper Title:</td>
+                    <td style="padding: 12px; border: 1px solid #ddd;">' . htmlspecialchars($_POST['Paper_Title']) . '</td>
+                </tr>
+                <tr style="background-color: #f8f9fa;">
                     <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Author Full Name:</td>
                     <td style="padding: 12px; border: 1px solid #ddd;">' . htmlspecialchars($_POST['Author_FUll_Name']) . '</td>
                 </tr>
@@ -112,6 +116,7 @@ try {
     ';
 
     $mail->AltBody = "New Paper Submission\n\n" .
+                    "Submission ID: " . $_POST['Submission_ID'] . "\n" .
                     "Paper Title: " . $_POST['Paper_Title'] . "\n" .
                     "Author Full Name: " . $_POST['Author_FUll_Name'] . "\n" .
                     "Email Address: " . $_POST['Email_Address'] . "\n" .
