@@ -9,23 +9,23 @@ import { Link } from 'react-router-dom';
 function Datesandbank() {
     const dates = [
         {
-            content1: " August 20, 2025",
+            content1: " October 02, 2025",
             title: "Abstract Submission Deadline"
         },
         {
-            content1: " August 29, 2025",
+            content1: "  October 07, 2025",
             title: "Full Paper Submission Deadline"
         },
         {
-            content1: " September 15, 2025",
+            content1: "  October 11, 2025",
             title: "Notification of Acceptance"
         },
         {
-            content1: " September 30, 2025",
+            content1: "  October 18, 2025",
             title: "Final Paper Submission"
         },
         {
-            content1: "October 2, 2025",
+            content1: "  October 24, 2025",
             title: "Registration Deadline"
         },
         {

@@ -66,8 +66,8 @@ function Header() {
     ];
     return (
         <div className='flex justify-center'>
-            <div className={` fixed w-full  max-w-[1400px] mx-auto md:rounded-[50px] rounded-b-[50px]  z-50  duration-500 ${scroll ? 'bg-white shadow-lg  top-0  ':'  bg-white shadow-lg  md:top-7 top-0 '} `}>
-                <div className='flex justify-between lg:py-3 py-5 lg:px-16 px-8   relative w-full'>
+            <div className={` fixed w-full  max-w-[1400px] mx-auto md:rounded-[15px] rounded-b-[15px]  z-50  duration-500 ${scroll ? 'bg-white shadow-lg  top-0  ':'  bg-white shadow-lg  md:top-5 top-0 '} `}>
+                <div className='flex justify-between lg:py-6 py-5 lg:px-16 px-8   relative w-full'>
                     <Link to="/">
                         <div className="">
                             <p className="namdhinggo-extrabold text-4xl text-[#40C3CD]">ICNGTHS</p>

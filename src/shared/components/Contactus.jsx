@@ -36,7 +36,7 @@ function Contactus() {
                 formDataToSend.append(key, value);
             });
 
-            const response = await fetch('http://192.168.29.71/icngths/contactus.php', {
+            const response = await fetch('https://icngths.com/api/contactus.php', {
                 method: 'POST',
                 body: formDataToSend,
             });
