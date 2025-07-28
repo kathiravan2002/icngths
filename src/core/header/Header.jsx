@@ -70,7 +70,8 @@ function Header() {
                 <div className='flex justify-between lg:py-6 py-5 lg:px-16 px-8   relative w-full'>
                     <Link to="/">
                         <div className="">
-                            <p className="namdhinggo-extrabold text-4xl text-[#40C3CD]">ICNGTHS</p>
+                            {/* <p className="namdhinggo-extrabold text-4xl text-[#40C3CD]">ICNGTHS</p> */}
+                            <img src="/images/ICNGTHS.png" className='md:w-40 w-28' alt="" />
                         </div>
                     </Link>
                     <div className="hidden md:block ">

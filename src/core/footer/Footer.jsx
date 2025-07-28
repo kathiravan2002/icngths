@@ -3,9 +3,9 @@ import { FaEnvelope, FaGlobe } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
-   const handleGmailLink = () => {
-        window.location.href = "mailto:info.icngths@gmail.com";
-    };
+  const handleGmailLink = () => {
+    window.location.href = "mailto:info.icngths@gmail.com";
+  };
   return (
     <footer className="bg-[#24a7b1] text-white rounded-tl-xl rounded-tr-xl">
       <div className=" mx-auto px-5 max-w-[1400px]  lg:py-10 py-5 ">
@@ -16,9 +16,10 @@ const Footer = () => {
               <img className='w-40 md:mx-0   mx-auto bg-white p-3 rounded-lg' src="/images/ICBAMS.png" alt="logo" />
             </Link> */}
             <Link to="/" className="text-white  text-4xl namdhinggo-extrabold">
-              ICNGTHS
+              {/* ICNGTHS */}
+              <img src="/images/ICNGTHS.png" className='md:w-40 w-28 bg-white p-4 rounded-md' alt="" />
             </Link>
-            
+
           </div>
           <div className='lg:mx-auto md:text-left text-start '>
             <h4 className="lg:text-xl poppins-bold mb-2 ">Quick Links</h4>

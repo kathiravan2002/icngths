@@ -89,189 +89,190 @@ function Papersubmission() {
 
 
 
-// const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     setStatus('Sending...');
-    
-//     const journalName = 'icngths';
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    //     setStatus('Sending...');
 
-    
-//     try {
-//         const formDataToSend = new FormData();
-//         formDataToSend.append('Paper_Title', formData.Paper_Title);
-//         formDataToSend.append('Author_FUll_Name', formData.Author_FUll_Name);
-//         formDataToSend.append('Email_Address', formData.Email_Address);
-//         formDataToSend.append('Institution_Name', formData.Institution_Name);
-//         formDataToSend.append('Paper_Track', formData.Paper_Track);
-        
-//         if (formData.Paper_File) {
-//             formDataToSend.append('Paper_File', formData.Paper_File);
-//         }
+    //     const journalName = 'icngths';
 
-//         const googleSheetsParams = new URLSearchParams();
-//         googleSheetsParams.append('journal_name', journalName); // Add journal name
-//         googleSheetsParams.append('Paper_Title', formData.Paper_Title);
-//         googleSheetsParams.append('Author_FUll_Name', formData.Author_FUll_Name);
-//         googleSheetsParams.append('Email_Address', formData.Email_Address);
-//         googleSheetsParams.append('Institution_Name', formData.Institution_Name);
-//         googleSheetsParams.append('Paper_Track', formData.Paper_Track);
 
-//         const mailPromise = fetch('http://192.168.29.85/icngths/icngths/mail.php', {
-//             method: 'POST',
-//             body: formDataToSend,
-//         });
+    //     try {
+    //         const formDataToSend = new FormData();
+    //         formDataToSend.append('Paper_Title', formData.Paper_Title);
+    //         formDataToSend.append('Author_FUll_Name', formData.Author_FUll_Name);
+    //         formDataToSend.append('Email_Address', formData.Email_Address);
+    //         formDataToSend.append('Institution_Name', formData.Institution_Name);
+    //         formDataToSend.append('Paper_Track', formData.Paper_Track);
 
-//         const sheetsPromise = fetch('https://script.google.com/macros/s/AKfycbwZ_TtKUqAfcue9TNCKy57hTrCKDUP5dTQnWbpSxBDzlRMllEuOoaxzRDl0kQPah5pZ/exec', {
-//             method: 'POST',
-//             mode: 'no-cors',
-//             headers: {
-//                 'Content-Type': 'application/x-www-form-urlencoded',
-//             },
-//             body: googleSheetsParams.toString(),
-//         });
+    //         if (formData.Paper_File) {
+    //             formDataToSend.append('Paper_File', formData.Paper_File);
+    //         }
 
-//         const [mailResponse, sheetsResponse] = await Promise.allSettled([mailPromise, sheetsPromise]);
+    //         const googleSheetsParams = new URLSearchParams();
+    //         googleSheetsParams.append('journal_name', journalName); // Add journal name
+    //         googleSheetsParams.append('Paper_Title', formData.Paper_Title);
+    //         googleSheetsParams.append('Author_FUll_Name', formData.Author_FUll_Name);
+    //         googleSheetsParams.append('Email_Address', formData.Email_Address);
+    //         googleSheetsParams.append('Institution_Name', formData.Institution_Name);
+    //         googleSheetsParams.append('Paper_Track', formData.Paper_Track);
 
-//         const mailSuccess = mailResponse.status === 'fulfilled' && mailResponse.value.ok;
-//         const sheetsSuccess = sheetsResponse.status === 'fulfilled';
-        
-//         if (sheetsResponse.status === 'rejected') {
-//             console.error('Sheets request failed:', sheetsResponse.reason);
-//         }
+    //         const mailPromise = fetch('http://192.168.29.85/icngths/icngths/mail.php', {
+    //             method: 'POST',
+    //             body: formDataToSend,
+    //         });
 
-//         if (mailSuccess && sheetsSuccess) {
-//             setStatus(`Submission successful! Data sent to both email and Google Sheets (${journalName}).`);
-            
-//             setFormData({
-//                 Paper_Title: '',
-//                 Author_FUll_Name: '',
-//                 Email_Address: '',
-//                 Institution_Name: '',
-//                 Paper_Track: '',
-//                 Paper_File: null,
-//             });
-//       const fileInput = document.getElementById('Paper_File');
-//              if (fileInput) {
-//                  fileInput.value = '';
-//              } else {
-//                  console.error('Element with ID "Paper_File" not found.');
-//              }
-//              toast.success("Paper submitted successfully!");
-            
-//         } else if (mailSuccess && !sheetsSuccess) {
-//             setStatus('Email sent successfully, but there might be an issue with Google Sheets.');
-//             toast.warning('Email sent successfully. Please check if data was saved to Google Sheets.');
-            
-//         } else if (!mailSuccess && sheetsSuccess) {
-//             setStatus('Data likely saved to Google Sheets, but failed to send email.');
-//             toast.warning('Data might be saved to Google Sheets, but failed to send email.');
-            
-//         } else {
-//             setStatus('There might be issues with the submission. Please check manually.');
-//             toast.error('Submission completed, but please verify the results manually.');
-//         }
+    //         const sheetsPromise = fetch('https://script.google.com/macros/s/AKfycbwZ_TtKUqAfcue9TNCKy57hTrCKDUP5dTQnWbpSxBDzlRMllEuOoaxzRDl0kQPah5pZ/exec', {
+    //             method: 'POST',
+    //             mode: 'no-cors',
+    //             headers: {
+    //                 'Content-Type': 'application/x-www-form-urlencoded',
+    //             },
+    //             body: googleSheetsParams.toString(),
+    //         });
 
-//     } catch (error) {
-//         console.error('Error:', error);
-//         setStatus('An error occurred during submission. Please try again.');
-//         toast.error('An error occurred. Please try again.');
-//     }
-// };
+    //         const [mailResponse, sheetsResponse] = await Promise.allSettled([mailPromise, sheetsPromise]);
 
-const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus('Sending...');
-    
-    const journalName = 'icngths';
-    // Generate unique ID: journalName + YYYYMMDD + HHMMSS
-    const now = new Date();
-    const dateStr = now.toISOString().slice(0, 10).replace(/-/g, ''); // YYYYMMDD
-    const timeStr = now.toTimeString().slice(0, 8).replace(/:/g, ''); // HHMMSS
-    const uniqueId = `${journalName}_${dateStr}_${timeStr}`;
-    
-    try {
-        const formDataToSend = new FormData();
-        formDataToSend.append('Submission_ID', uniqueId);
-        formDataToSend.append('Paper_Title', formData.Paper_Title);
-        formDataToSend.append('Author_FUll_Name', formData.Author_FUll_Name);
-        formDataToSend.append('Email_Address', formData.Email_Address);
-        formDataToSend.append('Institution_Name', formData.Institution_Name);
-        formDataToSend.append('Paper_Track', formData.Paper_Track);
-        
-        if (formData.Paper_File) {
-            formDataToSend.append('Paper_File', formData.Paper_File);
-        }
+    //         const mailSuccess = mailResponse.status === 'fulfilled' && mailResponse.value.ok;
+    //         const sheetsSuccess = sheetsResponse.status === 'fulfilled';
 
-        const googleSheetsParams = new URLSearchParams();
-        googleSheetsParams.append('Submission_ID', uniqueId);
-        googleSheetsParams.append('journal_name', journalName);
-        googleSheetsParams.append('Paper_Title', formData.Paper_Title);
-        googleSheetsParams.append('Author_FUll_Name', formData.Author_FUll_Name);
-        googleSheetsParams.append('Email_Address', formData.Email_Address);
-        googleSheetsParams.append('Institution_Name', formData.Institution_Name);
-        googleSheetsParams.append('Paper_Track', formData.Paper_Track);
+    //         if (sheetsResponse.status === 'rejected') {
+    //             console.error('Sheets request failed:', sheetsResponse.reason);
+    //         }
 
-        const mailPromise = fetch('http://192.168.29.85/icngths/icngths/mail.php', {
-            method: 'POST',
-            body: formDataToSend,
-        });
+    //         if (mailSuccess && sheetsSuccess) {
+    //             setStatus(`Submission successful! Data sent to both email and Google Sheets (${journalName}).`);
 
-        const sheetsPromise = fetch('https://script.google.com/macros/s/AKfycbwZ_TtKUqAfcue9TNCKy57hTrCKDUP5dTQnWbpSxBDzlRMllEuOoaxzRDl0kQPah5pZ/exec', {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: googleSheetsParams.toString(),
-        });
+    //             setFormData({
+    //                 Paper_Title: '',
+    //                 Author_FUll_Name: '',
+    //                 Email_Address: '',
+    //                 Institution_Name: '',
+    //                 Paper_Track: '',
+    //                 Paper_File: null,
+    //             });
+    //       const fileInput = document.getElementById('Paper_File');
+    //              if (fileInput) {
+    //                  fileInput.value = '';
+    //              } else {
+    //                  console.error('Element with ID "Paper_File" not found.');
+    //              }
+    //              toast.success("Paper submitted successfully!");
 
-        const [mailResponse, sheetsResponse] = await Promise.allSettled([mailPromise, sheetsPromise]);
+    //         } else if (mailSuccess && !sheetsSuccess) {
+    //             setStatus('Email sent successfully, but there might be an issue with Google Sheets.');
+    //             toast.warning('Email sent successfully. Please check if data was saved to Google Sheets.');
 
-        const mailSuccess = mailResponse.status === 'fulfilled' && mailResponse.value.ok;
-        const sheetsSuccess = sheetsResponse.status === 'fulfilled';
-        
-        if (sheetsResponse.status === 'rejected') {
-            console.error('Sheets request failed:', sheetsResponse.reason);
-        }
+    //         } else if (!mailSuccess && sheetsSuccess) {
+    //             setStatus('Data likely saved to Google Sheets, but failed to send email.');
+    //             toast.warning('Data might be saved to Google Sheets, but failed to send email.');
 
-        if (mailSuccess && sheetsSuccess) {
-            setStatus(`Submission successful! Data sent to both email and Google Sheets (${journalName}). Submission ID: ${uniqueId}`);
-            
-            setFormData({
-                Paper_Title: '',
-                Author_FUll_Name: '',
-                Email_Address: '',
-                Institution_Name: '',
-                Paper_Track: '',
-                Paper_File: null,
-            });
-            const fileInput = document.getElementById('Paper_File');
-            if (fileInput) {
-                fileInput.value = '';
-            } else {
-                console.error('Element with ID "Paper_File" not found.');
+    //         } else {
+    //             setStatus('There might be issues with the submission. Please check manually.');
+    //             toast.error('Submission completed, but please verify the results manually.');
+    //         }
+
+    //     } catch (error) {
+    //         console.error('Error:', error);
+    //         setStatus('An error occurred during submission. Please try again.');
+    //         toast.error('An error occurred. Please try again.');
+    //     }
+    // };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus('Sending...');
+
+        const journalName = 'icngths';
+        // Generate unique ID: journalName + YYYYMMDD + HHMMSS
+        const now = new Date();
+        const dateStr = now.toISOString().slice(0, 10).replace(/-/g, ''); // YYYYMMDD
+        const timeStr = now.toTimeString().slice(0, 8).replace(/:/g, ''); // HHMMSS
+        const uniqueId = `${journalName}_${dateStr}_${timeStr}`;
+
+        try {
+            const formDataToSend = new FormData();
+            formDataToSend.append('Submission_ID', uniqueId);
+            formDataToSend.append('Paper_Title', formData.Paper_Title);
+            formDataToSend.append('Author_FUll_Name', formData.Author_FUll_Name);
+            formDataToSend.append('Email_Address', formData.Email_Address);
+            formDataToSend.append('Institution_Name', formData.Institution_Name);
+            formDataToSend.append('Paper_Track', formData.Paper_Track);
+
+            if (formData.Paper_File) {
+                formDataToSend.append('Paper_File', formData.Paper_File);
             }
-            toast.success(`Paper submitted successfully! Submission ID: ${uniqueId}`);
-            
-        } else if (mailSuccess && !sheetsSuccess) {
-            setStatus('Email sent successfully, but there might be an issue with Google Sheets.');
-            toast.warning('Email sent successfully. Please check if data was saved to Google Sheets.');
-            
-        } else if (!mailSuccess && sheetsSuccess) {
-            setStatus('Data likely saved to Google Sheets, but failed to send email.');
-            toast.warning('Data might be saved to Google Sheets, but failed to send email.');
-            
-        } else {
-            setStatus('There might be issues with the submission. Please check manually.');
-            toast.error('Submission completed, but please verify the results manually.');
-        }
 
-    } catch (error) {
-        console.error('Error:', error);
-        setStatus('An error occurred during submission. Please try again.');
-        toast.error('An error occurred. Please try again.');
+            const googleSheetsParams = new URLSearchParams();
+            googleSheetsParams.append('Submission_ID', uniqueId);
+            googleSheetsParams.append('journal_name', journalName);
+            googleSheetsParams.append('Paper_Title', formData.Paper_Title);
+            googleSheetsParams.append('Author_FUll_Name', formData.Author_FUll_Name);
+            googleSheetsParams.append('Email_Address', formData.Email_Address);
+            googleSheetsParams.append('Institution_Name', formData.Institution_Name);
+            googleSheetsParams.append('Paper_Track', formData.Paper_Track);
+
+            const mailPromise = fetch('https://icngths.com/api/mail.php', {
+                method: 'POST',
+                body: formDataToSend,
+            });
+
+            const sheetsPromise = fetch('https://script.google.com/macros/s/AKfycbwZ_TtKUqAfcue9TNCKy57hTrCKDUP5dTQnWbpSxBDzlRMllEuOoaxzRDl0kQPah5pZ/exec', {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: googleSheetsParams.toString(),
+            });
+
+            const [mailResponse, sheetsResponse] = await Promise.allSettled([mailPromise, sheetsPromise]);
+
+            const mailSuccess = mailResponse.status === 'fulfilled' && mailResponse.value.ok;
+            const sheetsSuccess = sheetsResponse.status === 'fulfilled';
+
+            if (sheetsResponse.status === 'rejected') {
+                console.error('Sheets request failed:', sheetsResponse.reason);
+            }
+
+            if (mailSuccess && sheetsSuccess) {
+                setStatus(`Submission successful! Data sent to both email and Google Sheets (${journalName}). Submission ID: ${uniqueId}`);
+
+                setFormData({
+                    Paper_Title: '',
+                    Author_FUll_Name: '',
+                    Email_Address: '',
+                    Institution_Name: '',
+                    Paper_Track: '',
+                    Paper_File: null,
+                });
+                setFileName('');
+                const fileInput = document.getElementById('Paper_File');
+                if (fileInput) {
+                    fileInput.value = '';
+                } else {
+                    console.error('Element with ID "Paper_File" not found.');
+                }
+                toast.success(`Paper submitted successfully!`);
+
+            } else if (mailSuccess && !sheetsSuccess) {
+                setStatus('Email sent successfully, but there might be an issue with Google Sheets.');
+                toast.warning('Email sent successfully. Please check if data was saved to Google Sheets.');
+
+            } else if (!mailSuccess && sheetsSuccess) {
+                setStatus('Data likely saved to Google Sheets, but failed to send email.');
+                toast.warning('Data might be saved to Google Sheets, but failed to send email.');
+
+            } else {
+                setStatus('There might be issues with the submission. Please check manually.');
+                toast.error('Submission completed, but please verify the results manually.');
+            }
+
+        } catch (error) {
+            console.error('Error:', error);
+            setStatus('An error occurred during submission. Please try again.');
+            toast.error('An error occurred. Please try again.');
+        }
     }
-}
 
 
     return (
@@ -413,6 +414,7 @@ const handleSubmit = async (e) => {
                                 </div>
                                 <div className="relative w-full bg-gray-50 rounded-xl py-10 col-span-1 sm:col-span-2 md:col-span-2 flex flex-col items-center justify-center text-center text-gray-500 overflow-hidden cursor-pointer">
                                     <input
+                                        id="Paper_File"
                                         name='Paper_File'
                                         accept=".pdf,.doc,.docx"
                                         type="file"
@@ -452,7 +454,7 @@ const handleSubmit = async (e) => {
                             </div>
                             <Link to="/paper-submission">
                                 <div className="namdhinggo-extrabold lg:text-[24px] text-[18px] flex justify-center  ">
-                                <button className="group cursor-pointer flex items-center gap-4 px-6 py-2 rounded-full text-white font-semibold bg-gradient-to-r from-[#379197]  via-[#3bb2bb]  to-[#2798a0]  shadow-lg transition-all duration-500 ease-in-out hover:from-[#40C3CD]  hover:to-[#40C3CD]  hover:scale-105 hover:shadow-[0_8px_24px_rgba(44,83,100,0.6)]">
+                                    <button className="group cursor-pointer flex items-center gap-4 px-6 py-2 rounded-full text-white font-semibold bg-gradient-to-r from-[#379197]  via-[#3bb2bb]  to-[#2798a0]  shadow-lg transition-all duration-500 ease-in-out hover:from-[#40C3CD]  hover:to-[#40C3CD]  hover:scale-105 hover:shadow-[0_8px_24px_rgba(44,83,100,0.6)]">
                                         Register Now  <FaArrowRightLong className="text-[22px] transition-transform duration-300 group-hover:translate-x-1" />
                                     </button>
                                 </div>

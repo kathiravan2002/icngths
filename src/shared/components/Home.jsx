@@ -36,7 +36,6 @@ function Home() {
     return (
         <div >
             <div className="relative sm:h-[800px] lg:h-screen bg-cover md:rounded-bl-[300px] rounded-bl-[150px] border-b-[15px]  border-[#40C3CD]" style={{ backgroundImage: "url('/images/homehero.jpg')" }}>
-
                 <div className="absolute inset-0 bg-[#000000] sm:h-[800px]  lg:h-screen opacity-40 md:rounded-bl-[300px] rounded-bl-[150px] md:border-b-[15px] border-[#40C3CD]"></div>
                 <div className="flex justify-start items-center h-full max-w-[1400px] mx-auto ">
                     <div className=" relative z-10 mt-28  sm:mt-0 md:mt-0 lg:mt-15 flex flex-col 2xl:space-y-8 xl:space-y-5 lg:space-y-5 space-y-5 justify-center max-w-[900px] px-5 md:px-10 lg:px-15 xl:px-15 2xl:px-0 py-5 lg:mb-15 mb-15">
