@@ -67,7 +67,7 @@ function Header() {
     return (
         <div className='flex justify-center'>
             <div className={` fixed w-full  max-w-[1400px] mx-auto md:rounded-[15px] rounded-b-[15px]  z-50  duration-500 ${scroll ? 'bg-white shadow-lg  top-0  ':'  bg-white shadow-lg  md:top-5 top-0 '} `}>
-                <div className='flex justify-between lg:py-6 py-5 lg:px-16 px-8   relative w-full'>
+                <div className='flex justify-between items-center lg:py-6 py-5 lg:px-16 px-8   relative w-full'>
                     <Link to="/">
                         <div className="">
                             {/* <p className="namdhinggo-extrabold text-4xl text-[#40C3CD]">ICNGTHS</p> */}
@@ -75,7 +75,7 @@ function Header() {
                         </div>
                     </Link>
                     <div className="hidden md:block ">
-                        <ul className="flex gap-10 poppins-medium text-lg mt-1 text-[#40C3CD]">
+                        <ul className="flex gap-10 poppins-medium text-lg  text-[#40C3CD]">
                             <li className="">
                                 <Link to='/' className={` ${isActive == '/' ? 'text-[#40C3CD] ' : '  '}`}>Home</Link>
                             </li>
