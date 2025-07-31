@@ -16,7 +16,7 @@ const HelmetComponent = ({ title,canonical }) => {
             <meta property="og:image" content="https://icngths.com/images/ICNGTHS.png" />
 
             <link rel="canonical" href={canonical} />
-            <link rel="icon" type="image/png" href="https://icngths.com/images/ICNGTHS.png" />
+            <link rel="icon" type="image/png" href="https://icngths.com/images/ICNGTHS fav.png" />
 
         </Helmet>
     );
