@@ -111,12 +111,12 @@ function Editorial() {
             job: " Advanced Computing Lab ",
             country: "USA"
         },
-        {
-            name: " Dr. Yonglin Chen",
-            university: "The First Hospital of Lanzhou University",
-            job: "Department of Cardio",
-            country: "China"
-        },
+        // {
+        //     name: " Dr. Yonglin Chen",
+        //     university: "The First Hospital of Lanzhou University",
+        //     job: "Department of Cardio",
+        //     country: "China"
+        // },
         {
             name: " Dr. Brahim Issaoui",
             university: "Qassim University",
@@ -138,7 +138,7 @@ function Editorial() {
         {
             name: "Dr. R. Arun Kumar",
             university: "University of South Wales",
-            job: "Department of Cybersecuriy",
+            job: "Department of Cybersecurity",
             country: "United Kingdom"
         },
         {
